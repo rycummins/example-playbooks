@@ -1,8 +1,12 @@
 ---
 - hosts: all
-  gather_facts: true
+  #gather_facts: true
 
   tasks:
     - name: print ansible_date_time
       debug:
         var: ansible_date_time
+
+    - name: print local facts
+      debug:
+        var: ansible_local
